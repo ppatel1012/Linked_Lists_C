@@ -1,0 +1,26 @@
+proFile: src/helperA3.o src/recruitEmployee.o src/printAll.o src/printOne.o src/lookOnId.o src/lookOnFullName.o src/countEmployees.o src/sortEmployeesId.o src/fireOne.o src/fireAll.o src/mainA3.o
+	gcc -Wall -g -std=c99 src/helperA3.o src/recruitEmployee.o src/printAll.o src/printOne.o src/lookOnId.o src/lookOnFullName.o src/countEmployees.o src/sortEmployeesId.o src/fireOne.o src/fireAll.o src/mainA3.o -g -ggdb3 -o bin/proFile
+helperA3.o: src/helperA3.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/helperA3.c
+recruitEmployee.o: src/recruitEmployee.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/recruitEmployee.c
+printAll.o: src/printAll.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/printAll.c
+printOne.o: src/printOne.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/printOne.c
+lookOnId.o: src/lookOnId.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/lookOnId.c
+lookOnFullName.o: src/lookOnFullName.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/lookOnFullName.c
+countEmployees.o: src/countEmployees.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/countEmployees.c
+sortEmployeesId.o: src/sortEmployeesId.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/sortEmployeesId.c
+fireOne.o: src/fireOne.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/fireOne.c
+fireAll.o: src/fireAll.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/fireAll.c
+main.o: src/mainA3.c include/headerA3.h
+	gcc -Wall -g -std=c99 -c src/mainA3.c
+clean:
+	rm *.o bin/proFile
